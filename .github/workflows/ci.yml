@@ -1,0 +1,16 @@
+name: Meu primeiro CI
+
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  primeiro-job:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Mostrar mensagem
+        run: echo "Olá! Meu primeiro pipeline está funcionando!"
