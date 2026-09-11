@@ -25,3 +25,9 @@ jobs:
 
       - name: Mostrar mensagem
         run: echo "Olá! Meu primeiro pipeline CI/CD está funcionando!"
+
+      - name: Teste
+        run: |
+          echo: "Executando teste..."
+          test 1 -eq 1
+          echo "Teste aprovado"
