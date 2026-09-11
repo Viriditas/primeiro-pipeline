@@ -21,7 +21,7 @@ jobs:
           pwd
           echo ""
           echo "=== ARQUIVOS ==="
-          ls- la
+          ls -la
 
       - name: Mostrar mensagem
         run: echo "Olá! Meu primeiro pipeline CI/CD está funcionando!"
