@@ -28,6 +28,6 @@ jobs:
 
       - name: Teste
         run: |
-          echo: "Executando teste..."
+          echo "Executando teste..."
           test 1 -eq 1
           echo "Teste aprovado"
