@@ -12,5 +12,17 @@ jobs:
 
 
     steps:
+      - name: Mostrar sistema
+        run: |
+          echo "=== SISTEMA ==="
+          uname -a
+          echo ""
+          echo "=== DIRETORIO ATUAL ==="
+          pwd
+          echo ""
+          echo "=== ARQUIVOS ==="
+          ls- la
+
       - name: Mostrar mensagem
-        run: echo "Olá! Meu primeiro pipeline está funcionando!"
+        run: echo "Olá! Meu primeiro pipeline CI/CD 
+está funcionando!"
