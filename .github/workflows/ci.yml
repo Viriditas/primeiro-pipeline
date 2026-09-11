@@ -1,4 +1,4 @@
-name: Meu primeiro CI
+name: CI Python
 
 
 on:
@@ -6,28 +6,22 @@ on:
     branches:
       - main
 
-jobs:
-  primeiro-job:
-    runs-on: ubuntu-latest
 
+jobs:
+  testes:
+    runs-on: ubuntu latest
 
     steps:
-      - name: Mostrar sistema
-        run: |
-          echo "=== SISTEMA ==="
-          uname -a
-          echo ""
-          echo "=== DIRETORIO ATUAL ==="
-          pwd
-          echo ""
-          echo "=== ARQUIVOS ==="
-          ls -la
+      - name: Baixar código
+        uses: actions/checkout@v4
 
-      - name: Mostrar mensagem
-        run: echo "Olá! Meu primeiro pipeline CI/CD está funcionando!"
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
-      - name: Teste
-        run: |
-          echo "Executando teste..."
-          test 1 -eq 1
-          echo "Teste aprovado"
+      - name: Instalar pytest
+        run: pip install pytest
+
+      - name: Executar testes
+        run: pytest
